@@ -1,0 +1,15 @@
+.container {
+    height: 100%;
+}
+
+#next {
+    margin-top: 10px;
+}
+
+h1 {
+    margin: auto
+}
+
+form {
+    width: 100%;
+}

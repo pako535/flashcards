@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Ucz się słówek{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/form/full_background.css' %}"></link>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="cover-container d-flex h-80 p-3 mx-auto flex-column">
+            <main role="main" class="inner cover">
+                <div class="row">
+                    <h1 id="head">Witaj!</h1><br><br><br>
+                </div>
+
+                <div class="row">
+                    <form action="/learn">
+                        {% csrf_token %}
+                        <button class="btn btn-dark btn-block" type="submit">Ucz się słówek</button>
+                    </form>
+                </div>
+                <div class="row">
+                    <form action="/add">
+                        {% csrf_token %}
+                        <button class="btn btn-dark btn-block" type="submit">Dodaj słówka</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+{% endblock %}
+
+

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Tętno na AK{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/form/full_background.css' %}"></link>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="cover-container d-flex h-80 p-3 mx-auto flex-column">
+            <main role="main" class="inner cover">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        {{ form.pl_word.label }}
+                    </div>
+                    <div class="row">
+                        {{ form.pl_word }}
+                    </div>
+                    <div class="row">
+                        {{ form.eng_word.label }}
+                    </div>
+                    <div class="row">
+                        {{ form.eng_word }}
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-dark btn-block" type="submit">Dodaj</button>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+{% endblock %}
+
+

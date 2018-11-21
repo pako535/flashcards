@@ -1,0 +1,8 @@
+
+venv/
+
+\.idea/
+
+cards/__pycache__/
+
+flashcards/__pycache__/
