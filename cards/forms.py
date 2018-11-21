@@ -16,16 +16,19 @@ class TestYourSelf(forms.Form):
     translate = forms.CharField(
         label = 'Tłumaczenie: ',
         max_length = 100,
-        widget = forms.TextInput(attrs = {'class': 'inputs'}))
+        widget = forms.TextInput(attrs = {'class': 'inputs',
+                                          'autocomplete': 'off'}))
 
 
 class AddWords(forms.Form):
     pl_word = forms.CharField(
         label = 'Po polsku: ',
         max_length = 100,
-        widget = forms.TextInput(attrs = {'class': 'inputs'}))
+        widget = forms.TextInput(attrs = {'class': 'inputs',
+                                          'autocomplete': 'off'}))
     
     eng_word = forms.CharField(
         label = 'Po angielsku: ',
         max_length = 100,
-        widget = forms.TextInput(attrs = {'class': 'inputs'}))
+        widget = forms.TextInput(attrs = {'class': 'inputs',
+                                          'autocomplete': 'off'}))
