@@ -27,6 +27,13 @@
                         <button class="btn btn-dark btn-block" type="submit">Dodaj słówka</button>
                     </form>
                 </div>
+
+                 <div class="row">
+                    <form action="/reset" method="post">
+                        {% csrf_token %}
+                        <button class="btn btn-dark btn-block" type="submit">Resetuj licznik</button>
+                    </form>
+                </div>
             </main>
         </div>
     </div>
